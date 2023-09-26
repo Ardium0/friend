@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Buttons</title>
+  <style>
+    p {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .Friend {
+      outline: none;
+      display: inline-block;
+      box-shadow: 0 0 10px 3px rgba(88, 88, 88, 0.5);
+      margin-right: 10px;
+    }
+
+    .Logo {
+      height: 200px;
+      vertical-align: middle;
+      outline: none;
+    }
+
+    .Friends {
+      color: gray;
+      font-size: 14px;
+      padding-left: 10px;
+      margin-top: 0px;
+    }
+    .Name {
+      margin-bottom: 3px;
+      padding-left: 10px;
+    }
+
+    .Add {
+      margin-left: 10px;
+      margin-bottom: 7px;
+      background-color: deepskyblue;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      width: 100px;
+      height: 30px;
+      cursor: pointer;
+
+      transition: 0.3s;
+    }
+
+    .Add:hover {
+        background-color: rgb(20, 211, 255);
+        box-shadow: 0 0 6px 1px rgba(88, 88, 88, 0.5);
+    }
+
+    .Add:active {
+        background-color: rgb(30, 221, 255);
+        box-shadow: 0 0 6px 1px rgba(108, 108, 108, 0.5);
+    }
+  </style>
+</head>
+<body>
+    <script>
+        var switchVar = 0;
+        var switchVar2 = 0;
+        var switchVar3 = 0;
+    </script>
+  <div class="Friend">
+    <img class="Logo" src="Heisenberg.png">
+    <p class="Name">Walter White</p>
+    <p class="Friends">2 Společní přátelé</p>
+    <button class="Add" id="addButton" onclick="  
+        if (switchVar === 0) {
+            document.getElementById('addButton').style.backgroundColor = 'gray';
+            document.getElementById('addButton').textContent = 'Odebrat';
+            switchVar = 1;
+        } else if (switchVar === 1) {
+            document.getElementById('addButton').style.backgroundColor = 'deepskyblue';
+            document.getElementById('addButton').textContent = 'Přidat';
+            switchVar = 0;
+        }
+    ">Přidat</button>
+  </div>
+
+  <div class="Friend">
+    <img class="Logo" src="Saul.jpg">
+    <p class="Name">Saul Goodman</p>
+    <p class="Friends">1 Společný přítel</p>
+    <button class="Add" id="addButton2" onclick="  
+        if (switchVar2 === 0) {
+            document.getElementById('addButton2').style.backgroundColor = 'gray';
+            document.getElementById('addButton2').textContent = 'Odebrat';
+            switchVar2 = 1;
+        } else if (switchVar2 === 1) {
+            document.getElementById('addButton2').style.backgroundColor = 'deepskyblue';
+            document.getElementById('addButton2').textContent = 'Přidat';
+            switchVar2 = 0;
+        }
+    ">Přidat</button>
+  </div>
+
+  <div class="Friend">
+    <img class="Logo" src="Jesse.jpg">
+    <p class="Name">Jesse Pinkman</p>
+    <p class="Friends">0 Společných přátel</p>
+    <button class="Add" id="addButton3" onclick="  
+        if (switchVar3 === 0) {
+            document.getElementById('addButton3').style.backgroundColor = 'gray';
+            document.getElementById('addButton3').textContent = 'Odebrat';
+            switchVar3 = 1;
+        } else if (switchVar3 === 1) {
+            document.getElementById('addButton3').style.backgroundColor = 'deepskyblue';
+            document.getElementById('addButton3').textContent = 'Přidat';
+            switchVar3 = 0;
+        }
+    ">Přidat</button>
+  </div>
+</body>
+</html>
